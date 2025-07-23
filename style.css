@@ -1,9 +1,32 @@
+*{
+    font-family: 'Spicy Shrimp', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #AAB99A;
+    padding-bottom: 100px;
+    padding-top: 30px;
+    border-radius: 20px;
+}
+
 .container{
     display: flex;
     width: 600px;
     height: 600px;
     flex-wrap: wrap;
     flex-direction: row;
+    background-color: #D0DDD0;
 }
 
 .boxHolder{
@@ -14,9 +37,25 @@
 
 .boxes{
     flex: 1;
-    border: solid 1px;
+    border: solid 0.5px;
 }
 
-.boxes:hover{
-    background-color: red;
+.button-container{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.changeGrid{
+    padding: 10px 8px;
+    background-color: #F0F0D7;
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.changeGrid:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
