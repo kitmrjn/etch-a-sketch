@@ -2,6 +2,9 @@ const container = document.querySelector(".container");
 const boxes = document.querySelector(".boxes");
 const boxHolder = document.querySelector(".boxHolder");
 const changeGrid = document.querySelector(".changeGrid");
+const rainbowButton = document.querySelector("#rainbowButton");
+const resetButton = document.querySelector("#resetButton");
+
 
 
 let gridSize = 16;
@@ -23,6 +26,16 @@ function createGrid (size) {
         innerBox.addEventListener("mouseenter", () => {
             innerBox.style.backgroundColor = "#727D73";
         });
+
+        rainbowButton.addEventListener("click", () => {
+           innerBox.addEventListener("mouseenter", () => {
+            innerBox.style.backgroundColor = getRandomColor();
+        });
+        });
+
+        resetButton.addEventListener("click", () => {
+            innerBox.style.backgroundColor = "#D0DDD0";
+        })
     };
 };
 };
@@ -41,6 +54,21 @@ changeGrid.addEventListener("click", () => {
         alert("Please enter a valid number");
     };
 });
+
+
+function getRandomColor() {
+  let letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  };
+  return color;
+};
+
+
+
+
+
 
 
 
